@@ -1,9 +1,4 @@
 /* eslint-disable no-unused-vars */
-var seconds = 0;
-var $start = document.querySelector(".start");
-
-$start.addEventListener("click", startTimer);
-
 function startTimer() {
   setInterval(function() {
     seconds++;
@@ -18,3 +13,8 @@ function timer(seconds) {
   var timer = minutes + ":" + seconds;
   return timer;
 }
+
+var seconds = 0;
+var $start = document.querySelector(".start");
+
+$start.addEventListener("click", startTimer);
