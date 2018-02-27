@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  background: black;
+}
+
+.start {
+  background-color: white;
+}
+
+.seconds {
+  color: white;
+}
