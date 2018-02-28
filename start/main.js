@@ -5,6 +5,13 @@ function startTimer() {
     var $seconds = document.querySelector('.seconds')
     $seconds.textContent = timer(seconds)
   }, 1000)
+  return intervalId
+}
+
+function pauseTimer() {
+  for (var i = 0; i < 1000000; i++) {
+    clearInterval(i)
+  }
 }
 
 function timer(seconds) {
@@ -14,7 +21,10 @@ function timer(seconds) {
   return timer
 }
 
+var intervalId = 0
 var seconds = 0
 var $start = document.querySelector('.start')
+var $pause = document.querySelector('.pause')
 
 $start.addEventListener('click', startTimer)
+$pause.addEventListener('click', pauseTimer)
