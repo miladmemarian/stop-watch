@@ -1,17 +1,14 @@
 /* eslint-disable no-unused-vars */
 function startTimer() {
-  setInterval(function () {
+  intervalId = setInterval(function () {
     seconds++
     var $seconds = document.querySelector('.seconds')
     $seconds.textContent = timer(seconds)
   }, 1000)
-  return intervalId
 }
 
 function pauseTimer() {
-  for (var i = 0; i < 1000000; i++) {
-    clearInterval(i)
-  }
+  clearInterval(intervalId)
 }
 
 function timer(seconds) {
