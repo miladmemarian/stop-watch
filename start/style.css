@@ -53,3 +53,7 @@ body {
 .pause {
   width: 170px;
 }
+
+.input {
+  cursor: text;
+}
