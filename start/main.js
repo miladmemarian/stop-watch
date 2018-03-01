@@ -1,13 +1,14 @@
 /* eslint-disable no-unused-vars */
 function startTimer() {
   intervalId = setInterval(function () {
+    limit = Number(document.querySelector('.input').value)
+    if (limit - 1 === seconds) {
+      limitTimer()
+    }
     seconds++
     var $seconds = document.querySelector('.seconds')
     $seconds.textContent = timer(seconds)
   }, 1000)
-  if (hasLimit && seconds === limit) {
-    clearInterval(intervalId)
-  }
 }
 
 function pauseTimer() {
@@ -22,9 +23,7 @@ function resetTimer() {
 }
 
 function limitTimer() {
-  $limit = document.querySelector('.input')
-  limit = parseInt($limit.textContent, 10)
-  hasLimit = true
+  clearInterval(intervalId)
 }
 
 function timer(seconds) {
