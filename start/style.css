@@ -11,7 +11,7 @@ body {
 }
 
 .layer {
-  background-color: black;
+  background-color: rgb(84, 84, 84);
   height: 100%;
   width: 100%;
   z-index: 1;
@@ -46,10 +46,19 @@ body {
   z-index: 50;
   cursor: pointer;
   outline: none;
-  margin-top: 5px;
+  margin-top: 5 rem;
   width: 170px;
+  padding: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 .pause {
   width: 170px;
+}
+
+.input {
+  cursor: text;
+  margin-top: 2rem;
+  height: 75px;
 }
